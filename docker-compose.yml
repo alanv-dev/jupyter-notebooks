@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  miniconda:
+    container_name: miniconda
+    build: .
+    restart: unless-stopped
+    working_dir: /miniconda
+    tty: true
+    volumes:
+      - ./src:/miniconda
+    ports:
+      - 8888:8888
